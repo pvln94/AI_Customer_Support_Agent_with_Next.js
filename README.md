@@ -73,7 +73,14 @@ Hard deny if **any** fails: order exists and is yours · status `delivered` · p
 
 ## Getting started
 
-Prerequisites: Node 18+, a running MongoDB (local Community Server or Atlas), and an API key for any OpenAI-compatible LLM provider.
+Prerequisites: Node 22 (any recent Node 18+ works), a running MongoDB (local Community Server or Atlas), Chrome/Edge for voice, and an API key for any OpenAI-compatible LLM provider.
+
+Fresh-laptop checklist (only step 3 needs anything from outside the repo):
+1. Clone the repo, `cd` into it.
+2. `npm install` (uses the committed `package-lock.json`, so versions match mine exactly).
+3. `Copy-Item .env.example .env.local`, then fill in `LLM_API_KEY`, `LLM_MODEL`, `LLM_BASE_URL` (presets are commented in the file) and pick an `ADMIN_PASSWORD`.
+4. Make sure MongoDB is reachable at your `MONGODB_URI` (default `mongodb://localhost:27017` — install Community Server or use Atlas; connect via Compass to verify).
+5. `npm run seed`, then `npm run dev`. Nothing else is needed — no other setup, no extra services.
 
 ```powershell
 npm install
