@@ -167,14 +167,15 @@ Open `.env.local` and fill in your Groq key plus an `ADMIN_PASSWORD` of your cho
 `LLM_API_KEY=<your Groq key>`, `LLM_MODEL=openai/gpt-oss-20b`, `LLM_BASE_URL=https://api.groq.com/openai/v1`. (Other OpenAI-compatible providers also work — presets are commented in the file.)
 
 ```powershell
-npm run seed   # loads 15 customers + 25 orders, dates relative to today
-npm run dev    # chat at http://localhost:3000, admin at http://localhost:3000/admin
+npm run seed    # loads 15 customers + 25 orders, dates relative to today
+npm run reset   # fresh start: wipes agent logs + saved chats (seed data stays)
+npm run dev     # chat at http://localhost:3000, admin at http://localhost:3000/admin
 ```
 
 Verify quality gates:
 
 ```powershell
-npm run test              # all 18 tests (unit + integration + agent)
+npm run test              # all 22 tests (unit + integration + agent)
 npm run test:unit         # policy tests only, no DB needed
 npm run test:integration  # DB + agent-loop tests
 npx tsc --noEmit          # typecheck
