@@ -1,4 +1,4 @@
-// The bouncer for all incoming data — defines the allowed shapes of chat messages, tool arguments and admin queries in one place (used by API routes and tools).
+// lib/validation/schemas.ts
 import { z } from "zod";
 
 // WHY: one zod source keeps /api/chat, tools, and admin routes consistent.
