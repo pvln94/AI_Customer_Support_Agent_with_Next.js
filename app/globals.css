@@ -1,4 +1,4 @@
-/* Site-wide styles; locks the app to the readable light theme so chat bubbles always show dark text (loaded once by app/layout.tsx). */
+/* app/globals.css */
 @import "tailwindcss";
 
 :root {
