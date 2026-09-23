@@ -1,4 +1,4 @@
-// Tool 6 of 6 — hands the chat to a human for cases outside the rules, like disputes (called by the agent).
+// lib/tools/escalateToHuman.ts
 import { escalateSchema } from "@/lib/validation/schemas";
 import type { ToolContext } from "./context";
 import type { ToolResult } from "@/types";
