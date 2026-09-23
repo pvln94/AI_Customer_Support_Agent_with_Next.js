@@ -1,4 +1,4 @@
-// The refund records table — every decision ever made, with a database-level rule blocking two active refunds for one order (written by the submit tool; shown on the admin refunds tab).
+// models/RefundRequest.ts
 import mongoose, { Schema } from "mongoose";
 import { cleanJSON } from "./Customer";
 
