@@ -1,4 +1,4 @@
-// Tool 4 of 6 — test-runs the refund rules for an order without changing anything, like a quote before you commit (called by the agent).
+// lib/tools/checkRefundEligibility.ts
 import { connectDB } from "@/lib/mongodb";
 import { OrderModel } from "@/models/Order";
 import { CustomerModel } from "@/models/Customer";
