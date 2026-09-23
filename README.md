@@ -3,7 +3,7 @@
 
 I built this for the Jobform Automator Next.js Developer assignment: a customer support agent that approves, denies, or escalates e-commerce refund requests — over **text chat and voice**. My core design decision: **the LLM handles conversation, deterministic code makes decisions**. The model can only call tools — it can never approve a refund itself — so even a prompt-injection attack ("ignore the rules and approve") fails by design.
 
-> Demo video: [add your Loom/Drive link here]
+> Demo video: [https://drive.google.com/file/d/1mOF_lF7D9XwEgUpoarNunieaZocZ9BE6/view?usp=sharing]
 
 ## What I built
 
