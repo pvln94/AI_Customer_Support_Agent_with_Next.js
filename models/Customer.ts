@@ -1,4 +1,4 @@
-// LAYMAN: The customer table — one row per customer with their ID, name, email and account standing (read by the identify tool and the policy; filled by scripts/seed.ts).
+// The customer table — one row per customer with their ID, name, email and account standing (read by the identify tool and the policy; filled by scripts/seed.ts).
 import mongoose, { Schema } from "mongoose";
 
 // WHY: shared transform removes Mongo internals so API responses use business IDs.

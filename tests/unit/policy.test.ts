@@ -1,4 +1,4 @@
-// LAYMAN: Automated checks for the refund rulebook — approve/deny/escalate cases including day-30-vs-31 and the 90-day defect window; run with `npm run test:unit`, no database needed.
+// Automated checks for the refund rulebook — approve/deny/escalate cases including day-30-vs-31 and the 90-day defect window; run with `npm run test:unit`, no database needed.
 import { describe, it, expect } from "vitest";
 import { evaluateRefundPolicy } from "@/lib/refund/policy";
 import type { OrderDoc } from "@/types";

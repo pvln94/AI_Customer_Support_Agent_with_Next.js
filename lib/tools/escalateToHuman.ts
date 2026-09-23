@@ -1,4 +1,4 @@
-// LAYMAN: Tool 6 of 6 — hands the chat to a human for cases outside the rules, like disputes (called by the agent).
+// Tool 6 of 6 — hands the chat to a human for cases outside the rules, like disputes (called by the agent).
 import { escalateSchema } from "@/lib/validation/schemas";
 import type { ToolContext } from "./context";
 import type { ToolResult } from "@/types";

@@ -1,4 +1,4 @@
-// LAYMAN: Dictionary entries so TypeScript understands the browser's microphone and speaker objects (used by components/VoiceInput.tsx and ChatInterface.tsx).
+// Dictionary entries so TypeScript understands the browser's microphone and speaker objects (used by components/VoiceInput.tsx and ChatInterface.tsx).
 // Minimal Web Speech API types (Chrome/Edge). WHY: avoids `any` while staying
 // dependency-free — no paid voice service needed for the bonus requirement.
 interface SpeechRecognitionAlternative {

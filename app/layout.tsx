@@ -1,4 +1,4 @@
-// LAYMAN: The outer HTML shell (font, title, theme) wrapped around every page; Next.js requires this file to exist.
+// The outer HTML shell (font, title, theme) wrapped around every page; Next.js requires this file to exist.
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";

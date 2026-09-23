@@ -1,4 +1,4 @@
-// LAYMAN: Admin endpoint that processes a refund using the exact same code as the chat agent, so both paths always agree (reuses lib/tools/submitRefundRequest.ts).
+// Admin endpoint that processes a refund using the exact same code as the chat agent, so both paths always agree (reuses lib/tools/submitRefundRequest.ts).
 import { z } from "zod";
 import { run as submitRun } from "@/lib/tools/submitRefundRequest";
 

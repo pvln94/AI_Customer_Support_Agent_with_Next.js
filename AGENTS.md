@@ -1,4 +1,4 @@
-<!-- LAYMAN: House rules for anyone (or any AI) editing this project — the architecture decisions that must not be broken, plus Next.js version notes. -->
+<!-- House rules for anyone (or any AI) editing this project — the architecture decisions that must not be broken, plus Next.js version notes. -->
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know

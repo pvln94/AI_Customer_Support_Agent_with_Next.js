@@ -1,4 +1,4 @@
-// LAYMAN: Saved chats — one row per conversation with the verified customer and the user/assistant messages (read/written by lib/agent/loop.ts; shown on the admin conversations tab).
+// Saved chats — one row per conversation with the verified customer and the user/assistant messages (read/written by lib/agent/loop.ts; shown on the admin conversations tab).
 import mongoose, { Schema } from "mongoose";
 import { cleanJSON } from "./Customer";
 

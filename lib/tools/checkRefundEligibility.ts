@@ -1,4 +1,4 @@
-// LAYMAN: Tool 4 of 6 — test-runs the refund rules for an order without changing anything, like a quote before you commit (called by the agent).
+// Tool 4 of 6 — test-runs the refund rules for an order without changing anything, like a quote before you commit (called by the agent).
 import { connectDB } from "@/lib/mongodb";
 import { OrderModel } from "@/models/Order";
 import { CustomerModel } from "@/models/Customer";

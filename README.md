@@ -1,4 +1,4 @@
-<!-- LAYMAN: The project's front page on GitHub — what I built, why, setup commands, test scenarios, screenshots and demo guide. -->
+<!-- The project's front page on GitHub — what I built, why, setup commands, test scenarios, screenshots and demo guide. -->
 # AI Customer Support Agent — Refund Prototype
 
 I built this for the Jobform Automator Next.js Developer assignment: a customer support agent that approves, denies, or escalates e-commerce refund requests — over **text chat and voice**. My core design decision: **the LLM handles conversation, deterministic code makes decisions**. The model can only call tools — it can never approve a refund itself — so even a prompt-injection attack ("ignore the rules and approve") fails by design.

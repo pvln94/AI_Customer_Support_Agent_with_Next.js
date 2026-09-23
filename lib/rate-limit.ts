@@ -1,4 +1,4 @@
-// LAYMAN: Stops one person spamming the AI endpoint — allows 20 chat requests per minute per visitor, then says "slow down" (used by app/api/chat/route.ts).
+// Stops one person spamming the AI endpoint — allows 20 chat requests per minute per visitor, then says "slow down" (used by app/api/chat/route.ts).
 // Simple in-memory per-IP rate limiter. WHY: protects the LLM-backed
 // /api/chat route from abuse without adding Redis for a prototype.
 

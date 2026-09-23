@@ -1,4 +1,4 @@
-// LAYMAN: Clickable sample customers and prompts that fill the chat input so demos are one click (used by ChatInterface).
+// Clickable sample customers and prompts that fill the chat input so demos are one click (used by ChatInterface).
 "use client";
 
 // WHY: sample IDs + prompts that fill the input so a demo can be recorded fast.

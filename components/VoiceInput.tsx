@@ -1,4 +1,4 @@
-// LAYMAN: The Mic button that turns your speech into text and hands it to the chat; spoken emails/IDs are tidied by lib/voice/normalize.ts first (used by ChatInterface; needs Chrome/Edge).
+// The Mic button that turns your speech into text and hands it to the chat; spoken emails/IDs are tidied by lib/voice/normalize.ts first (used by ChatInterface; needs Chrome/Edge).
 "use client";
 
 import { useEffect, useRef, useState } from "react";

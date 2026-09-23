@@ -1,4 +1,4 @@
-// LAYMAN: Admin endpoint that looks up one order by ID (used for admin detail lookups).
+// Admin endpoint that looks up one order by ID (used for admin detail lookups).
 import { connectDB } from "@/lib/mongodb";
 import { OrderModel } from "@/models/Order";
 

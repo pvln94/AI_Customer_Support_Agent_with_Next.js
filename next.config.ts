@@ -1,4 +1,4 @@
-// LAYMAN: Next.js's own settings file (currently default — the app needs it to exist to build).
+// Next.js's own settings file (currently default — the app needs it to exist to build).
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {

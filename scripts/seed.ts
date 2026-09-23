@@ -1,4 +1,4 @@
-// LAYMAN: The fixture loader — fills the database with 15 fake customers and 25 orders covering every demo scenario; safe to re-run anytime via `npm run seed` (writes to all tables except logs).
+// The fixture loader — fills the database with 15 fake customers and 25 orders covering every demo scenario; safe to re-run anytime via `npm run seed` (writes to all tables except logs).
 // Seed script: npm run seed (tsx --env-file=.env.local scripts/seed.ts)
 // WHY: dates are relative to now so demo scenarios stay valid over time.
 import mongoose from "mongoose";

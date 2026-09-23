@@ -1,4 +1,4 @@
-// LAYMAN: The bouncer at the admin door — asks for the username/password before letting anyone into /admin or /api/admin/* (Next.js 16 calls this file proxy.ts instead of middleware).
+// The bouncer at the admin door — asks for the username/password before letting anyone into /admin or /api/admin/* (Next.js 16 calls this file proxy.ts instead of middleware).
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 

@@ -1,4 +1,4 @@
-// LAYMAN: The refund records table — every decision ever made, with a database-level rule blocking two active refunds for one order (written by the submit tool; shown on the admin refunds tab).
+// The refund records table — every decision ever made, with a database-level rule blocking two active refunds for one order (written by the submit tool; shown on the admin refunds tab).
 import mongoose, { Schema } from "mongoose";
 import { cleanJSON } from "./Customer";
 
