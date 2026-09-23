@@ -1,4 +1,4 @@
-// The chat endpoint the browser calls; checks your message, enforces the 20-per-minute limit, then runs the AI agent (called by ChatInterface through lib/api-client.ts).
+// app/api/chat/route.ts
 import { runAgent } from "@/lib/agent/loop";
 import { chatRequestSchema } from "@/lib/validation/schemas";
 import { rateLimit, rateLimitResponse } from "@/lib/rate-limit";
