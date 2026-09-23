@@ -1,4 +1,4 @@
-// The actual connection to Groq (or any OpenAI-style AI service) using your API key from .env.local; the only file that talks to the outside AI world (used by lib/agent/loop.ts).
+// lib/llm/openai-compatible.ts
 import OpenAI from "openai";
 import type { LLMMessage, LLMProvider, LLMResult, LLMToolDef } from "./provider";
 
