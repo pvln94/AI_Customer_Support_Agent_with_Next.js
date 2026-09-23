@@ -1,4 +1,4 @@
-// Admin endpoint that returns agent activity logs newest-first with filters (called by the AdminDashboard logs tab).
+// app/api/admin/logs/route.ts
 import { connectDB } from "@/lib/mongodb";
 import { AgentLogModel } from "@/models/AgentLog";
 import { adminLogsQuerySchema } from "@/lib/validation/schemas";
