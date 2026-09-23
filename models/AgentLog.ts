@@ -1,4 +1,4 @@
-// The agent's diary table — short masked summaries of each step (shown on the admin logs tab; written by lib/logging/logger.ts).
+// models/AgentLog.ts
 import mongoose, { Schema } from "mongoose";
 import { cleanJSON } from "./Customer";
 
