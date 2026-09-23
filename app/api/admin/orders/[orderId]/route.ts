@@ -1,4 +1,4 @@
-// Admin endpoint that looks up one order by ID (used for admin detail lookups).
+// app/api/admin/orders/[orderId]/route.ts
 import { connectDB } from "@/lib/mongodb";
 import { OrderModel } from "@/models/Order";
 
