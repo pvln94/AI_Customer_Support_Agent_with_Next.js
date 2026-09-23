@@ -42,7 +42,7 @@ flowchart LR
   TOOLS --> POLICY[policy.ts v1]
   LOOP --> GUARD[truthfulness guard]
   GUARD --> UI
-  ADMIN[Admin dashboard] --> ADMINAPI[/api/admin/*]
+  ADMIN[Admin dashboard] --> ADMINAPI["/api/admin/*"]
   ADMINAPI --> DB
 ```
 
