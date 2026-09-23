@@ -1,4 +1,4 @@
-// Clickable sample customers and prompts that fill the chat input so demos are one click (used by ChatInterface).
+// components/DemoScenarios.tsx
 "use client";
 
 // WHY: sample IDs + prompts that fill the input so a demo can be recorded fast.
