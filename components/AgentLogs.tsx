@@ -1,4 +1,4 @@
-// The color-coded expandable timeline of one agent request — tool picked, started, result, decision (used by AdminDashboard).
+// components/AgentLogs.tsx
 "use client";
 
 // WHY: color-coded timeline makes retries/errors visible without reading raw JSON.
