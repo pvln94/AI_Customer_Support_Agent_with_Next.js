@@ -1,4 +1,4 @@
-// Translator for spoken words — turns "at the rate" into @, "dot" into ., "001" into CUST-001 before voice text enters the chat; typed messages skip this (used by components/VoiceInput.tsx; covered by unit tests).
+// lib/voice/normalize.ts
 // WHY: speech recognition returns words, not symbols — "Priya dot Nair at
 // the rate example dot test" must become priya.nair@example.test, and
 // "customer ID is 001" must become CUST-001, or verification always fails.
