@@ -1,4 +1,4 @@
-// Scrubs emails (p***@…) and trims text before anything is logged, so private data never lands in the database (used by lib/logging/logger.ts).
+// lib/logging/mask.ts
 // WHY: logs must never contain raw emails or model reasoning — only short summaries.
 export function maskEmail(text: string): string {
   return text.replace(
