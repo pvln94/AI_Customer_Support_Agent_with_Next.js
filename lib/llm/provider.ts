@@ -1,4 +1,4 @@
-// The plug socket for the AI model — defines what "chat with tools" looks like so the real provider (or a fake one in tests) can slot in (used by lib/agent/loop.ts and lib/llm/openai-compatible.ts).
+// lib/llm/provider.ts
 // WHY: small interface keeps the agent testable (fake provider) and lets us
 // point at any OpenAI-compatible endpoint via env vars.
 
