@@ -1,4 +1,4 @@
-// Admin endpoint that lists all refund records, filterable by decision/status (called by the AdminDashboard refunds tab).
+// app/api/admin/refunds/route.ts
 import { connectDB } from "@/lib/mongodb";
 import { RefundRequestModel } from "@/models/RefundRequest";
 
