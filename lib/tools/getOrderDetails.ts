@@ -1,4 +1,4 @@
-// Tool 3 of 6 — fetches one order's details, but only if it belongs to the verified customer (called by the agent).
+// lib/tools/getOrderDetails.ts
 import { connectDB } from "@/lib/mongodb";
 import { OrderModel } from "@/models/Order";
 import { orderIdSchema } from "@/lib/validation/schemas";
