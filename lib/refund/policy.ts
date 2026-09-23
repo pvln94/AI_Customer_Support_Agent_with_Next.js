@@ -1,4 +1,4 @@
-// The refund rulebook as code — given an order it answers approve/deny/escalate (30-day window, 90 for defects, $500+ and suspended go to humans); pure math, no database, so it's unit-testable (used by the submit/eligibility tools).
+// lib/refund/policy.ts
 // Refund Policy v1 — pure function, no DB access.
 // WHY: rules live in code (not the prompt) so prompt injection cannot approve.
 // The LLM is the conversation layer; this file is the decision layer.
