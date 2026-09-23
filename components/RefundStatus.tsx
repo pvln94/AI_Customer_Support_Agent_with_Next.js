@@ -1,4 +1,4 @@
-// The small green/red/yellow APPROVED/DENIED/ESCALATED badge on agent replies; it reads the decision from tool data, never from chat text (used by ChatInterface).
+// components/RefundStatus.tsx
 "use client";
 
 import type { RefundSummary } from "@/types";
