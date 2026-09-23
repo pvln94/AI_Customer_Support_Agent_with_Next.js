@@ -19,7 +19,7 @@ I built this for the Jobform Automator Next.js Developer assignment: a customer 
 | Next.js App Router + React + TypeScript | One framework for UI and API route handlers; end-to-end types |
 | MongoDB + Mongoose | Flexible customer/order data; a partial unique index in the DB itself blocks duplicate active refunds |
 | zod | Single source of validation shared by the API, tools, and admin routes |
-| `openai` SDK against any OpenAI-compatible endpoint | I can swap providers via env vars (I developed against Groq's free tier). Model name is never hardcoded |
+| `openai` npm package pointed at Groq | I run Groq's free tier through its OpenAI-compatible chat API (`LLM_BASE_URL=https://api.groq.com/openai/v1`, `LLM_MODEL=openai/gpt-oss-20b`); switching providers later is env-only, and the model name is never hardcoded |
 | Vitest + mongodb-memory-server | Fast unit tests plus real-DB integration tests without touching dev data |
 | tsx | Runs the seed script with `--env-file=.env.local` |
 | Tailwind CSS | Quick, clean chat UI |
@@ -73,7 +73,7 @@ Hard deny if **any** fails: order exists and is yours · status `delivered` · p
 
 ## Getting started
 
-Prerequisites: Node 22 (any recent Node 18+ works), a running MongoDB (local Community Server or Atlas), Chrome/Edge for voice, and an API key for any OpenAI-compatible LLM provider.
+Prerequisites: Node 22 (any recent Node 18+ works), a running MongoDB (local Community Server or Atlas), Chrome/Edge for voice, and a free Groq API key (console.groq.com → API Keys → Create).
 
 Fresh-laptop checklist (only step 3 needs anything from outside the repo):
 1. Clone the repo, `cd` into it.
@@ -87,8 +87,8 @@ npm install
 Copy-Item .env.example .env.local
 ```
 
-Open `.env.local` and fill in: `LLM_API_KEY`, `LLM_MODEL` (e.g. `openai/gpt-oss-20b` on Groq, or any model your provider serves), `LLM_BASE_URL`, and pick an `ADMIN_PASSWORD`. I used Groq's free tier for development:
-`LLM_BASE_URL=https://api.groq.com/openai/v1`.
+Open `.env.local` and fill in your Groq key plus an `ADMIN_PASSWORD` of your choice:
+`LLM_API_KEY=<your Groq key>`, `LLM_MODEL=openai/gpt-oss-20b`, `LLM_BASE_URL=https://api.groq.com/openai/v1`. (Other OpenAI-compatible providers also work — presets are commented in the file.)
 
 ```powershell
 npm run seed   # loads 15 customers + 25 orders, dates relative to today
@@ -157,4 +157,4 @@ For real production I'd still add: real session auth, Redis-backed rate limits, 
 ## Limitations & next steps
 
 - In-memory rate limit resets on restart; truthfulness guard is a regex heuristic; admin uses polling, not websockets
-- Voice uses the browser's built-in speech recognition, so accuracy depends on mic quality and it needs Chrome/Edge; a production upgrade would be a vendor realtime API (OpenAI Realtime, ElevenLabs, LiveKit)
+- Voice uses the browser's built-in speech recognition, so accuracy depends on mic quality and it needs Chrome/Edge; a production upgrade would be a vendor realtime API (ElevenLabs, LiveKit)
