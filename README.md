@@ -202,29 +202,17 @@ Refresh the page between cases for a fresh conversation. If an approved order bl
 
 ## Screenshots
 
-> **TODO for me:** capture these and drop them in `docs/`, then delete these notes.
+> **Chat window after the CUST-013 approval, showing the green APPROVED badge.**
+<img width="1916" height="923" alt="image" src="https://github.com/user-attachments/assets/e1134a0e-b4a0-4d6a-a081-aa89e636a136" />
 
-![Customer chat with approval badge](docs/screenshot-chat.png)
-> Take: chat window after the CUST-001 approval, showing the green APPROVED badge.
+> **`/admin` logs tab with one requestId expanded (tool selected → started → result → final decision).**
+<img width="1407" height="903" alt="image" src="https://github.com/user-attachments/assets/0e2fff3e-7df5-41a9-9601-5d1c02c5f245" />
 
-![Admin dashboard timeline](docs/screenshot-admin.png)
-> Take: `/admin` logs tab with one requestId expanded (tool selected → started → result → final decision).
+> **CUST-002 expired-window denial with the red badge.**
+<img width="1505" height="962" alt="image" src="https://github.com/user-attachments/assets/027fb8e9-9e23-47a6-8800-5836f8ee24a0" />
 
-![Denied case](docs/screenshot-denied.png)
-> Take: CUST-002 expired-window denial with the red badge.
+> **chat window with the Mic button showing "Listening…" plus a spoken reply (toggle visible).**
 
-![Voice interaction](docs/screenshot-voice.png)
-> Take: chat window with the Mic button showing "Listening…" plus a spoken reply (toggle visible).
-
-## Demo video outline (7–10 min)
-
-1. The problem + my rule: LLM talks, code decides (1 min)
-2. Architecture diagram walkthrough (1 min)
-3. Live: valid refund CUST-001, approved (2 min)
-4. Live: voice interaction — click Mic, speak a refund request, agent replies aloud (1 min)
-5. Live: expired denial + prompt-injection failure CUST-015 (2 min)
-6. Live: high-value escalation + admin timeline showing retries (2 min)
-7. Trade-offs, limitations, production voice upgrade path (1 min)
 
 ## Security — implemented vs production
 
