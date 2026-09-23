@@ -1,4 +1,4 @@
-// Admin endpoint that returns recent customer chats (called by the AdminDashboard conversations tab).
+// app/api/admin/conversations/route.ts
 import { connectDB } from "@/lib/mongodb";
 import { ConversationModel } from "@/models/Conversation";
 
