@@ -28,7 +28,7 @@ No LangGraph or agent frameworks — for 6 tools, raw function calling is simple
 
 ## Voice integration
 
-Mic input uses `SpeechRecognition` (Chrome/Edge): the live transcript is shown while speaking, and the final transcript is passed to the same `sendMessage(text)` typed input uses — one pipeline for both. Agent replies are spoken via `speechSynthesis`, with a "Speak agent replies aloud" toggle. No extra API keys or dependencies; mic requires `localhost` or HTTPS plus browser microphone permission. Implementation: `components/VoiceInput.tsx`, `types/speech.d.ts`, and the `speak()` helper in `ChatInterface.tsx`.
+Mic input uses `SpeechRecognition` (Chrome/Edge): the live transcript is shown while speaking, and the final transcript is passed to the same `sendMessage(text)` typed input uses — one pipeline for both. Because recognizers return words ("at the rate", "dot", "001"), transcripts pass through `lib/voice/normalize.ts`, which converts them to symbols and business IDs (`priya.nair@example.test`, `CUST-001`, `ORD-1001`) before sending — typed input is untouched. Agent replies are spoken via `speechSynthesis`, with a "Speak agent replies aloud" toggle. No extra API keys or dependencies; mic requires `localhost` or HTTPS plus browser microphone permission. Implementation: `components/VoiceInput.tsx`, `lib/voice/normalize.ts` (unit-tested), `types/speech.d.ts`, and the `speak()` helper in `ChatInterface.tsx`.
 
 ## Architecture
 

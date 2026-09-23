@@ -19,5 +19,5 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Refund object in chat responses comes from tool results, never LLM text (truthfulness guard in `lib/agent/`).
 - Admin (`/admin`, `/api/admin/*`) behind Basic Auth in `proxy.ts` (Next 16 convention).
 - Chat sending goes through ONE function `sendMessage(text)` — voice transcripts reuse it, so chat and voice share one pipeline.
-- Voice uses the free browser Web Speech API (`components/VoiceInput.tsx` mic in, `speechSynthesis` replies out). No voice vendor SDKs; no extra API keys.
+- Voice uses the free browser Web Speech API (`components/VoiceInput.tsx` mic in, `speechSynthesis` replies out). Spoken words are normalized to symbols/IDs in `lib/voice/normalize.ts` (voice-only; typed input untouched). No voice vendor SDKs; no extra API keys.
 - Next 16: route params are `Promise` (`{ params: Promise<{…}> }` + `await params`); proxy file is `proxy.ts`.

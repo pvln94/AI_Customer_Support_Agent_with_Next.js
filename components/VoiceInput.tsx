@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { normalizeSpokenInput } from "@/lib/voice/normalize";
 
 function recognitionCtor(): (new () => SpeechRecognition) | null {
   if (typeof window === "undefined") return null;
@@ -67,13 +68,14 @@ export default function VoiceInput({
       );
       setListening(false);
     };
-    // Single send per utterance: flush accumulated finals when speech ends.
+    // Single send per utterance: normalize spoken words ("at the rate" -> @,
+    // "001" -> CUST-001) then flush accumulated finals when speech ends.
     rec.onend = () => {
       setListening(false);
       setInterim("");
       const text = finalsRef.current.trim();
       finalsRef.current = "";
-      if (text) onTranscript(text);
+      if (text) onTranscript(normalizeSpokenInput(text));
     };
     recRef.current = rec;
     try {
