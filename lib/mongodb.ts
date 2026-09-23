@@ -1,4 +1,4 @@
-// Opens the single shared MongoDB connection reused by the whole server, and refuses to load in the browser by mistake (used by every tool, route and script).
+// lib/mongodb.ts
 import mongoose from "mongoose";
 
 // WHY: Next.js hot reload creates new module instances; caching the promise
