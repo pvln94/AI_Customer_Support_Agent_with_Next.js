@@ -1,4 +1,4 @@
-// Code-style rules for `npm run lint` — mostly Next.js's own recommended checks (not part of the app itself).
+// eslint.config.mjs
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
