@@ -1,4 +1,4 @@
-// Tool 1 of 6 — checks your customer ID + email against the database and marks this chat as verified (called by the agent; error message never reveals which field was wrong).
+// lib/tools/identifyCustomer.ts
 import { connectDB } from "@/lib/mongodb";
 import { CustomerModel } from "@/models/Customer";
 import { ConversationModel } from "@/models/Conversation";
