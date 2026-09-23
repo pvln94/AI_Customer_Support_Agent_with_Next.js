@@ -1,4 +1,4 @@
-// The chat window itself — typing box, message bubbles, Mic button, spoken replies; every message you send goes through one sendMessage() function (shown by app/page.tsx).
+// components/ChatInterface.tsx
 "use client";
 
 import { useEffect, useState } from "react";
