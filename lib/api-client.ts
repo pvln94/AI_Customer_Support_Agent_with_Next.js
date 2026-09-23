@@ -1,4 +1,4 @@
-// The browser's phone line to the server — one function that posts chat messages to /api/chat and returns the reply (used by components/ChatInterface.tsx).
+// lib/api-client.ts
 // WHY: one client keeps frontend calls, zod shapes, and API routes consistent.
 import type { RefundSummary } from "@/types";
 
