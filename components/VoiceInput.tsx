@@ -19,11 +19,17 @@ export default function VoiceInput({
   const [listening, setListening] = useState(false);
   const [interim, setInterim] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const [supported] = useState(() => recognitionCtor() !== null);
+  // WHY: starts false to match the server render (no window on the server),
+  // then updates after mount — avoids a hydration mismatch in Chrome/Edge.
+  const [supported, setSupported] = useState(false);
   const recRef = useRef<SpeechRecognition | null>(null);
   const finalsRef = useRef("");
 
   useEffect(() => {
+    // Mount-only sync: server has no window, so capability must be detected
+    // on the client after hydration (prevents SSR mismatch).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setSupported(recognitionCtor() !== null);
     return () => {
       recRef.current?.abort();
     };
