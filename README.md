@@ -202,16 +202,21 @@ Refresh the page between cases for a fresh conversation. If an approved order bl
 
 ## Screenshots
 
+
 > **Chat window after the CUST-013 approval, showing the green APPROVED badge.**
 <img width="1916" height="923" alt="image" src="https://github.com/user-attachments/assets/e1134a0e-b4a0-4d6a-a081-aa89e636a136" />
+
 
 > **`/admin` logs tab with one requestId expanded (tool selected → started → result → final decision).**
 <img width="1407" height="903" alt="image" src="https://github.com/user-attachments/assets/0e2fff3e-7df5-41a9-9601-5d1c02c5f245" />
 
+
 > **CUST-002 expired-window denial with the red badge.**
 <img width="1505" height="962" alt="image" src="https://github.com/user-attachments/assets/027fb8e9-9e23-47a6-8800-5836f8ee24a0" />
 
+
 > **chat window with the Mic button showing "Listening…" plus a spoken reply (toggle visible).**
+<img width="1427" height="930" alt="image" src="https://github.com/user-attachments/assets/e842aea7-cd6e-4630-b512-de0a70dcebd5" />
 
 
 ## Security — implemented vs production
