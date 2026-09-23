@@ -1,3 +1,4 @@
+// LAYMAN: The toolbox index — describes all 6 tools to the AI and runs whichever one it picks, with a 5-second safety timeout (used by lib/agent/loop.ts).
 import * as identifyCustomer from "./identifyCustomer";
 import * as listCustomerOrders from "./listCustomerOrders";
 import * as getOrderDetails from "./getOrderDetails";

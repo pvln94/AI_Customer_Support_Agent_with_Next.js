@@ -1,3 +1,4 @@
+// LAYMAN: The orders table — product, dates, price, delivery/payment/refund status per order; the policy engine judges refunds off these rows (read by order tools; filled by scripts/seed.ts).
 import mongoose, { Schema } from "mongoose";
 import { cleanJSON } from "./Customer";
 

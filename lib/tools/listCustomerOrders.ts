@@ -1,3 +1,4 @@
+// LAYMAN: Tool 2 of 6 — lists all orders of the already-verified customer, so the agent can ask "which order?" (called by the agent).
 import { connectDB } from "@/lib/mongodb";
 import { OrderModel } from "@/models/Order";
 import type { ToolContext } from "./context";

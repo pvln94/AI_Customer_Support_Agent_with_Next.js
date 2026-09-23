@@ -1,3 +1,4 @@
+// LAYMAN: Test helper that spins up a throwaway in-memory database so tests never touch your real demo data (used by the integration and agent tests).
 import mongoose from "mongoose";
 import { MongoMemoryServer } from "mongodb-memory-server";
 

@@ -1,3 +1,4 @@
+// LAYMAN: Automated checks of the agent loop using a scripted fake AI (costs nothing) — retries, false-approval guard, injection resistance (run with `npm run test:integration`).
 import { describe, it, expect, beforeAll, afterAll, beforeEach } from "vitest";
 import { startTestDB, clearDB } from "../helpers/db";
 import type { LLMProvider } from "@/lib/llm/provider";

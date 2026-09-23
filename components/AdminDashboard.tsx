@@ -1,3 +1,4 @@
+// LAYMAN: The admin screen with counters, tabs, filters and 5-second auto-refresh showing everything the agent did (shown by app/admin/page.tsx).
 "use client";
 
 import { useEffect, useState } from "react";

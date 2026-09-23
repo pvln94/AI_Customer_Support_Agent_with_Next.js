@@ -1,3 +1,4 @@
+// LAYMAN: Writes one-line diary entries of what the agent did (tool picked, result, decision) for the admin timeline to display; logging can never crash the chat (used by lib/agent/loop.ts).
 import { AgentLogModel } from "@/models/AgentLog";
 import { summarize } from "./mask";
 import type { AgentEventType } from "@/types";

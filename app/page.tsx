@@ -1,3 +1,4 @@
+// LAYMAN: The chat homepage you open in the browser; it just shows the ChatInterface box (Next.js shows this file for the "/" route).
 import ChatInterface from "@/components/ChatInterface";
 
 // Server Component shell; chat itself is a Client Component.

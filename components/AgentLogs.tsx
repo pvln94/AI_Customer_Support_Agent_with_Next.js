@@ -1,3 +1,4 @@
+// LAYMAN: The color-coded expandable timeline of one agent request — tool picked, started, result, decision (used by AdminDashboard).
 "use client";
 
 // WHY: color-coded timeline makes retries/errors visible without reading raw JSON.

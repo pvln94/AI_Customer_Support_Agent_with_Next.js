@@ -1,3 +1,4 @@
+// LAYMAN: Automated checks against a throwaway test database — proves re-validation blocks stale approvals, double-submits make one refund, and strangers can't see your orders (run with `npm run test:integration`).
 import { describe, it, expect, beforeAll, afterAll, beforeEach } from "vitest";
 import { startTestDB, clearDB } from "../helpers/db";
 

@@ -1,3 +1,4 @@
+// LAYMAN: Automated checks that spoken words ("at the rate", "001") become proper emails/IDs and typed text is untouched; run with `npm run test:unit`.
 import { describe, it, expect } from "vitest";
 import { normalizeSpokenInput } from "@/lib/voice/normalize";
 

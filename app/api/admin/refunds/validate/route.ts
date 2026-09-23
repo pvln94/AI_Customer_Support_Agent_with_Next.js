@@ -1,3 +1,4 @@
+// LAYMAN: Admin endpoint that dry-runs the refund rules for an order without changing anything (uses the same policy engine as the agent).
 import { z } from "zod";
 import { connectDB } from "@/lib/mongodb";
 import { OrderModel } from "@/models/Order";

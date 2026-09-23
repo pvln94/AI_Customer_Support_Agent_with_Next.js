@@ -1,3 +1,4 @@
+// LAYMAN: The shared vocabulary — customer/order/refund shapes used by the UI, tools, policy and API so everything agrees (imported across the whole project).
 // Central business types. WHY: one place keeps API, tools, policy, and UI consistent.
 
 export type AccountStatus = "active" | "suspended";

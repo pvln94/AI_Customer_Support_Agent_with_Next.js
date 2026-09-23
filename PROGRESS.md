@@ -1,3 +1,4 @@
+<!-- LAYMAN: Build diary — the plan, milestones and what was verified working at each step. -->
 # PROGRESS.md — AI Customer Support Agent (Refund Agent, Stage 1)
 
 Env (verified 2026-09-21):

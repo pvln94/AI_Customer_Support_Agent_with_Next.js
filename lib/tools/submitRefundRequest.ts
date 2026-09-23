@@ -1,3 +1,4 @@
+// LAYMAN: Tool 5 of 6 — the ONLY tool allowed to change data; re-checks the rules on fresh data, then records an approved/denied/escalated refund exactly once, even if retried (called by the agent and the admin process endpoint).
 import { connectDB } from "@/lib/mongodb";
 import { OrderModel } from "@/models/Order";
 import { CustomerModel } from "@/models/Customer";
