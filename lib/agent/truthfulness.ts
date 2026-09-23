@@ -1,4 +1,4 @@
-// Safety net that catches the AI falsely claiming "refund approved" when no tool actually approved anything, and swaps in a safe reply (used by lib/agent/loop.ts).
+// lib/agent/truthfulness.ts
 // WHY: regex heuristic — the LLM sometimes claims success without a tool.
 // This guard replaces such text with a safe template and logs the mismatch.
 const APPROVAL_CLAIM =
