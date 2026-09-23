@@ -1,4 +1,4 @@
-// Demo helper that can force a tool to fail on purpose, so you can show off the retry logic on video (used by every tool; switched on via SIMULATE_FAILURE in .env.local).
+// lib/tools/simulate.ts
 // SIMULATE_FAILURE e.g. "getOrderDetails:1,submitRefundRequest:2".
 // WHY: lets the demo force transient failures to show retry logic.
 const counters = new Map<string, number>();
