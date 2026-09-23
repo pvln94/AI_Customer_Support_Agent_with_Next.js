@@ -1,4 +1,4 @@
-// Admin endpoint that dry-runs the refund rules for an order without changing anything (uses the same policy engine as the agent).
+// app/api/admin/refunds/validate/route.ts
 import { z } from "zod";
 import { connectDB } from "@/lib/mongodb";
 import { OrderModel } from "@/models/Order";
