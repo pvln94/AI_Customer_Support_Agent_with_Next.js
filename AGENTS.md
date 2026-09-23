@@ -1,4 +1,4 @@
-<!-- House rules for anyone (or any AI) editing this project — the architecture decisions that must not be broken, plus Next.js version notes. -->
+<!-- AGENTS.md -->
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
