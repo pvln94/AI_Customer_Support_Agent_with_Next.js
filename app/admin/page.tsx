@@ -1,4 +1,4 @@
-// The password-protected admin page; it just shows the AdminDashboard (Next.js shows this file for the "/admin" route).
+// app/admin/page.tsx
 import AdminDashboard from "@/components/AdminDashboard";
 
 export default function AdminPage() {
