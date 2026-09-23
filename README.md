@@ -48,7 +48,82 @@ flowchart LR
 
 Key files: `lib/agent/loop.ts` (orchestration), `lib/tools/*` (the 6 tools), `lib/refund/policy.ts` (the rules), `app/api/chat/route.ts` (entry point), `components/ChatInterface.tsx` (UI).
 
-## How a message flows (the part I explain in interviews)
+Mental model (plain-text version — three promises: **one funnel**, **code decides**, **badge never lies**):
+
+```text
+                   CUSTOMER
+              (types + speaks, hears reply)
+                      │
+                      ▼
+              ┌───────────────┐
+              │ Next.js UI    │
+              │               │
+              │ Chat          │
+              │ Mic (speech→  │
+              │  text)        │
+              │ Speaker       │
+              │ (text→speech) │
+              │ Dashboard     │
+              └───────┬───────┘
+                      │  sendMessage(text)
+                      │  (one funnel: typed
+                      │   + transcripts)
+                      ▼
+              ┌───────────────┐
+              │ Next.js API   │
+              │ /api/chat     │
+              │ validate +    │
+              │ rate-limit    │
+              └───────┬───────┘
+                      │
+                      ▼
+              ┌───────────────┐
+              │ Agent loop    │
+              │ (max 6 turns) │
+              │ system prompt │
+              │ + history     │
+              └───────┬───────┘
+                      │
+          ┌───────────┼───────────┐
+          ▼           ▼           ▼
+       Groq LLM    MongoDB     Policy v1
+       (tools      (orders,     (pure rules:
+        only)      customers,    deny > escalate
+          │        refunds,      > approve)
+          │        logs)
+          ▼           ▼
+       Tool calls  Fresh data
+       (6 tools,   (re-check
+        server      every turn)
+        context)
+          │           │
+          └──────────┬──────────┘
+                     ▼
+              ┌───────────────┐
+              │ Truthfulness  │
+              │ guard (claims │
+              │ need a tool   │
+              │ result)       │
+              └───────┬───────┘
+                      │  { reply, refund }
+                      │  badge from tool
+                      │  data, never text
+                      ▼
+                   Next.js UI
+                  (bubble +
+                   badge + voice)
+                      │
+                      ▼
+                   CUSTOMER
+
+        ┌───────────────────┐
+        │ /admin dashboard  │◄── reads agentlogs,
+        │ (Basic Auth, 5s   │    refunds, chats
+        │  polling)         │    from MongoDB
+        └───────────────────┘
+```
+
+## How a message flows 
 
 1. `sendMessage(text)` in `ChatInterface.tsx` POSTs `{ conversationId?, message }` to `/api/chat`. All sending goes through this one function so voice input can reuse it later.
 2. The route validates with zod (1–1000 chars), rate-limits (20 req/min per IP), then calls `runAgent`.
