@@ -1,4 +1,4 @@
-// The agent's brain — takes your message, talks to the AI model in up to 6 rounds, runs whatever tools it asks for, and returns the reply plus the refund decision (called by app/api/chat/route.ts).
+// lib/agent/loop.ts
 import { randomUUID } from "crypto";
 import { connectDB } from "@/lib/mongodb";
 import { ConversationModel } from "@/models/Conversation";
